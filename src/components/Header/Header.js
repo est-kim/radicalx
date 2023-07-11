@@ -48,7 +48,6 @@ function Header({ onAvatarData }) {
     setAvatarData(data);
   };
 
-  console.log("avatarData in header", avatarData);
   return (
     <AppBar>
       {/* <Container id="header" maxWidth="false"> */}

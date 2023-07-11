@@ -1,16 +1,25 @@
-import './App.css';
-import Header from './components/Header/Header';
-import AvatarCreatorComponent from './components/Avatar/AvatarCreator';
-import { Avatar } from '@mui/material';
-import LoadAvatar from './components/Avatar/LoadAvatar';
+import "./App.css";
+import Header from "./components/Header/Header";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0, // 12px
+      sm: 576, // 14px
+      md: 768, // 14px
+      lg: 1024,  // 16px
+      xl: 1280, // 16px
+      xxl: 1536, // 20px
+    },
+  },
+});
 
 function App() {
   return (
-    <div>
-      <Header />
-      {/* <AvatarCreatorComponent subdomain="radicalx"/> */}
-      {/* <LoadAvatar /> */}
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header/>
+    </ThemeProvider>
   );
 }
 

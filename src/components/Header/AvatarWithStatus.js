@@ -1,4 +1,3 @@
-// AvatarWithStatus.js
 import { Avatar, Box } from "@mui/material";
 
 function AvatarWithStatus({ avatarSrc }) {

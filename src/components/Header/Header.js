@@ -5,12 +5,7 @@ import {
   Box,
   Toolbar,
   Typography,
-  IconButton,
-  Menu,
-  MenuItem,
-  Avatar,
   Button,
-  Tooltip,
 } from "@mui/material";
 import CurrencyButton from "./CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButtonImage";

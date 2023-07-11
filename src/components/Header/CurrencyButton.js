@@ -15,7 +15,14 @@ function CurrencyButton({ children, type }) {
     <Box
       sx={{
         display: "flex",
-        padding: "2px",
+        padding: {
+          xs: "1px",
+          sm: "1px",
+          md: "1px",
+          lg: "1px",
+          xl: "1px",
+          xxl: "2px",
+        },
         borderRadius: "40px",
         backgroundImage,
         alignItems: "center",

@@ -1,10 +1,18 @@
 import "./Header.module.css";
 import * as React from "react";
-import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Button,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import CurrencyButton from "./CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButtonImage";
 import AvatarWithStatus from "./AvatarWithStatus";
-import LoadAvatar from "../Avatar/LoadAvatar";
+import PageButton from "./PageButton";
 
 const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -13,12 +21,18 @@ function Header() {
   const [selectedPage, setSelectedPage] = React.useState(null);
   const [avatarData, setAvatarData] = React.useState({ url: "", id: "" });
 
+  const theme = useTheme();
+  const isXsToMd = useMediaQuery(theme.breakpoints.between("xs", "lg"));
+  const logo = isXsToMd
+    ? "/SmallBlueLogoRadicalX.svg"
+    : "/WhiteLogoRadicalX.svg";
+
   const handlePageClick = (pageName) => {
     setSelectedPage(pageName);
   };
 
   return (
-    <AppBar>
+    <AppBar id="app-bar" sx={{ backgroundColor: "#181A20" }}>
       <Toolbar
         id="header"
         disableGutters
@@ -27,14 +41,19 @@ function Header() {
           justifyContent: "space-between",
           alignItems: "center",
           boxSizing: "border-box",
+          margin: {
+            sm: "0px 24px 0px 24px",
+            md: "0px 24px 0px 24px",
+            lg: "0px 40px 0px 40px",
+            xl: "0px 42px 0px 42px",
+            xxl: "0px 40px 0px 40px",
+          },
         }}
       >
         <Box
           sx={{
-            // display: { xs: "none", md: "flex" },
             alignItems: "center",
-            // justifyContent: "center",
-            // flexGrow: 1,
+            // flexShrink: 0,
           }}
         >
           <Typography
@@ -44,58 +63,37 @@ function Header() {
             sx={{
               alignItems: "center",
               justifyContent: "center",
-              flexShrink: 0,
             }}
           >
-            <img src="/WhiteLogoRadicalX.svg" alt="Logo" />
+            <img src={logo} alt="Logo" />
           </Typography>
         </Box>
+
         <Box
           id="menu-board"
           sx={{
             display: "flex",
             alignItems: "center", // Vertically align items
-            gap: "16px",
-            marginLeft: "140px",
+            gap: { md: "16px", lg: "16px", xl: "16px", xxl: "24px" },
+            // margin: { sm: "24px", md: "24px", lg: "40px", xl: "42px", xxl: "40px" },
             // justifyContent: "center", // Horizontally align items
           }}
         >
           {pages.map((page) => (
-            <Button
-              key={page}
-              onClick={() => handlePageClick(page)}
-              sx={{
-                my: 2,
-                display: "block",
-                color: selectedPage === page ? "transparent" : "darkgrey", // Adjust color as per requirement
-                fontSize: "20px", // font-size
-                fontFamily: "Inter", // font-family
-                fontWeight: 700, // font-weight
-                lineHeight: "160%", // line-height
-                textTransform: "none", // text-transform
-                gap: "24px",
-                backgroundImage:
-                  selectedPage === page
-                    ? "linear-gradient(to right, #00F5A0, #00D9F5)"
-                    : "none",
-                backgroundClip: selectedPage === page ? "text" : "border-box",
-                WebkitBackgroundClip:
-                  selectedPage === page ? "text" : "border-box",
-                WebkitTextFillColor:
-                  selectedPage === page ? "transparent" : "darkgrey",
-              }}
-            >
-              {page}
-            </Button>
+            <PageButton
+              page={page}
+              selectedPage={selectedPage}
+              handlePageClick={handlePageClick}
+            />
           ))}
           <Box
             id="currencies"
             sx={{
-              marginLeft: "140px", // The space you want to the right
+              marginLeft: { md: "32px", lg: "44px", xl: "160px", xxl: "140px" }, // The space you want to the right
               display: "flex",
               justifyContent: "space-between", // Distribute the space evenly between your buttons
               alignItems: "center",
-              gap: "16px",
+              gap: { md: "8px", lg: "8px", xl: "8px", xxl: "16px" },
             }}
           >
             <CurrencyButton type="Diamond">
@@ -117,7 +115,11 @@ function Header() {
           </Box>
           <Box
             id="avatar-photo"
-            sx={{ display: "flex", boxSizing: "border-box" }}
+            sx={{
+              marginLeft: { md: "0px", lg: "-4px", xl: "-4px", xxl: "-8px" },
+              display: "flex",
+              boxSizing: "border-box",
+            }}
           >
             <AvatarWithStatus avatarSrc="/ellipse.svg" />
           </Box>

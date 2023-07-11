@@ -13,6 +13,7 @@ import {
   Tooltip,
 } from "@mui/material";
 import CurrencyButton from "./CurrencyButton";
+import CurrencyButtonImage from "./CurrencyButtonImage";
 import LoadAvatar from "../Avatar/LoadAvatar";
 
 const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
@@ -176,20 +177,18 @@ function Header({ onAvatarData }) {
             }}
           >
             <CurrencyButton type="Diamond">
-              <Box
+              <CurrencyButtonImage
                 component="img"
                 src="/DiamondBlue.svg"
                 alt="Diamond"
-                sx={{ width: 28, height: 28 }}
               />
               20,000
             </CurrencyButton>
             <CurrencyButton type="Coin">
-              <Box
+              <CurrencyButtonImage
                 component="img"
                 src="/CoinGold.svg"
                 alt="Coin"
-                sx={{ width: 28, height: 28 }}
               />
               11,000
             </CurrencyButton>

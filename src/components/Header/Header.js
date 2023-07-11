@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import CurrencyButton from "./CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButtonImage";
+import AvatarWithStatus from "./AvatarWithStatus";
 import LoadAvatar from "../Avatar/LoadAvatar";
 
 const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
@@ -194,52 +195,7 @@ function Header({ onAvatarData }) {
             </CurrencyButton>
           </Box>
           <Box id="avatar-photo" sx={{ flexGrow: 0, pr: "40px" }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                {avatarData.url ? (
-                  <LoadAvatar url={avatarData.url} id={avatarData.id} />
-                ) : (
-                  <Box position="relative">
-                    <Avatar
-                      alt="avatar-photo"
-                      src="/ellipse.svg"
-                      sx={{ width: 45, height: 45 }}
-                    />
-                    <Box
-                      position="absolute"
-                      bottom={0}
-                      right={0}
-                      width={11.25}
-                      height={11.25}
-                      bgcolor="#12D18E"
-                      borderRadius="50%"
-                    ></Box>
-                  </Box>
-                )}
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <AvatarWithStatus avatarSrc="/ellipse.svg" />
           </Box>
         </Box>
       </Toolbar>

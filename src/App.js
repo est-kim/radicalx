@@ -5,12 +5,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   breakpoints: {
     values: {
-      xs: 0, // 12px
-      sm: 576, // 14px
-      md: 768, // 14px
-      lg: 1024,  // 16px
-      xl: 1280, // 16px
-      xxl: 1536, // 20px
+      xs: 0, //
+      sm: 576, //
+      md: 768, //
+      lg: 1024,  //
+      xl: 1280, //
+      xxl: 1536, // 
     },
   },
 });

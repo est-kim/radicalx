@@ -51,22 +51,36 @@ function Header() {
         }}
       >
         <Box
+          component="a"
+          href="/"
+          id="logo"
           sx={{
             alignItems: "center",
-            // flexShrink: 0,
+            justifyContent: "center",
+            display: "flex",
+            flexShrink: 0,
+            img: {
+              width: {
+                xs: "28px",
+                sm: "36px",
+                md: "36px",
+                lg: "166.72px",
+                xl: "166.72px",
+                xxl: "166.72px",
+              },
+              height: {
+                xs: "28px",
+                sm: "36px",
+                md: "36px",
+                lg: "21.341px",
+                xl: "21.341px",
+                xxl: "21.341px",
+              }
+            }
           }}
         >
-          <Typography
-            component="a"
-            href="/"
-            id="logo"
-            sx={{
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
             <img src={logo} alt="Logo" />
-          </Typography>
+
         </Box>
 
         <Box

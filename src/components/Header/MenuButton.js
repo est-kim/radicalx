@@ -33,15 +33,16 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
     return (
       <Box
         sx={{
-          display: "flex",
+          display: "inline-flex",
           padding: {
             xs: "1px",
             sm: "1px",
           },
           borderRadius: "100px",
           backgroundImage,
-          alignItems: "center",
+          alignItems: "flex-start",
           justifyContent: "center",
+          height: {xs: "100%",sm: "100%"},
         }}
       >
         <Button
@@ -72,10 +73,11 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
             borderRadius: "100px",
             alignItems: "center",
             justifyContent: "center",
-            height: "36px",
+            alignSelf: "center",
+            height: {xs: "100%",sm: "36px"},
             display: "flex",
-            gap: "8px",
-            padding: "6px 16px",
+            gap: { xs: "4px", sm: "8px" },
+            padding: {xs: "8px", sm: "6px 16px"},
           }}
         >
           {selectedPage || "🚀 Missions"}{" "}

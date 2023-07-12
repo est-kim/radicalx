@@ -40,13 +40,13 @@ function Header() {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
           boxSizing: "border-box",
           margin: {
+            xs: "0px 16px 0px 16px",
             sm: "0px 24px 0px 24px",
             md: "0px 24px 0px 24px",
             lg: "0px 40px 0px 40px",
-            xl: "0px 42px 0px 42px",
+            xl: "0px 42px 0px 40px",
             xxl: "0px 40px 0px 40px",
           },
         }}
@@ -61,7 +61,9 @@ function Header() {
             display: "flex",
             flexShrink: 0,
             marginRight: {
+              xs: "8px",
               sm: "24px",
+              md: "16px"
             },
             img: {
               width: {
@@ -85,12 +87,12 @@ function Header() {
         >
           <img src={logo} alt="Logo" />
         </Box>
-
         <Box
           id="menu-board"
           sx={{
             display: "flex",
             alignItems: "center", // Vertically align items
+            justifyContent: "space-between",
             gap: {
               xs: "auto",
               sm: "auto",
@@ -99,68 +101,61 @@ function Header() {
               xl: "16px",
               xxl: "24px",
             },
-            // margin: { sm: "24px", md: "24px", lg: "40px", xl: "42px", xxl: "40px" },
-            justifyContent: "space-between", // Horizontally align items
-            alignSelf: {
-              sm: "stretch",
-            },
           }}
         >
           <MenuButton
             pages={pages}
             selectedPage={selectedPage}
             handlePageClick={handlePageClick}
-            // sx={{ marginRight: { xs: 'auto', sm: 'auto' } }}
           />
-          <Box
-            id="currencies"
-            sx={{
-              marginLeft: {
-                sm: "auto",
-                md: "32px",
-                lg: "44px",
-                xl: "160px",
-                xxl: "140px",
-              }, // The space you want to the right
-              display: "flex",
-              justifyContent: "space-between", // Distribute the space evenly between your buttons
-              alignItems: "center",
-              gap: { sm: "8px", md: "8px", lg: "8px", xl: "8px", xxl: "16px" },
-            }}
-          >
-            <CurrencyButton type="Diamond">
-              <CurrencyButtonImage
-                component="img"
-                src="/DiamondBlue.svg"
-                alt="Diamond"
-              />
-              20,000
-            </CurrencyButton>
-            <CurrencyButton type="Coin">
-              <CurrencyButtonImage
-                component="img"
-                src="/CoinGold.svg"
-                alt="Coin"
-              />
-              11,000
-            </CurrencyButton>
-          </Box>
-          <Box
-            id="avatar-photo"
-            sx={{
-              marginLeft: {
-                sm: "8px",
-                md: "0px",
-                lg: "-4px",
-                xl: "-4px",
-                xxl: "-8px",
-              },
-              display: "flex",
-              boxSizing: "border-box",
-            }}
-          >
-            <AvatarWithStatus avatarSrc="/ellipse.svg" />
-          </Box>
+        </Box>
+
+        <Box
+          id="currencies"
+          sx={{
+            marginLeft: {
+              xs: "auto",
+              sm: "auto",
+              md: "0px",
+              lg: "0px",
+              xl: "0px",
+              xxl: "0px",
+            }, // The space you want to the right
+            display: "flex",
+            // justifyContent: "space-between", // Distribute the space evenly between your buttons
+            alignItems: "center",
+            alignSelf: {
+              xs: "center",
+              xxl: "stretch"
+            },
+            gap: { xs: "4px", sm: "8px", md: "8px", lg: "8px", xl: "8px", xxl: "16px" },
+          }}
+        >
+          <CurrencyButton type="Diamond">
+            <CurrencyButtonImage
+              component="img"
+              src="/DiamondBlue.svg"
+              alt="Diamond"
+            />
+            20,000
+          </CurrencyButton>
+          <CurrencyButton type="Coin">
+            <CurrencyButtonImage
+              component="img"
+              src="/CoinGold.svg"
+              alt="Coin"
+            />
+            11,000
+          </CurrencyButton>
+        <Box
+          id="avatar-photo"
+          sx={{
+            display: "flex",
+            boxSizing: "border-box",
+          }}
+        >
+          <AvatarWithStatus avatarSrc="/ellipse.svg" />
+        </Box>
         </Box>
       </Toolbar>
       {/* </Container> */}

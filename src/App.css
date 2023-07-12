@@ -30,7 +30,19 @@ article h1 {
 }
 
 /* For screens with a width between 1024px and 1535px */
-@media (min-width: 1024px) and (max-width: 1535px) {
+@media (min-width: 0px) and (max-width: 575px) {
+  #header {
+    height: 52px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  #header {
+    height: 64px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1535px) {
   #header {
     height: 66px;
   }

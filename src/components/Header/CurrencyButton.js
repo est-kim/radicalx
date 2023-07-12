@@ -27,6 +27,7 @@ function CurrencyButton({ children, type }) {
         backgroundImage,
         alignItems: "center",
         justifyContent: "center",
+        height: {xs: "100%",sm: "100%"},
       }}
     >
       <Button
@@ -53,6 +54,7 @@ function CurrencyButton({ children, type }) {
           alignSelf: {
             xs: "stretch",
           },
+          height: {xs: "100%",sm: "100%"},
           borderRadius: "40px",
           backgroundColor: "#181A20", // Adjust color as per requirement
           color: "#FFFFFF", // Adjust color as per requirement

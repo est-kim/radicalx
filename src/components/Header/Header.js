@@ -13,6 +13,7 @@ import CurrencyButton from "./CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButtonImage";
 import AvatarWithStatus from "./AvatarWithStatus";
 import PageButton from "./PageButton";
+import MenuButton from "./MenuButton";
 
 const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -59,6 +60,9 @@ function Header() {
             justifyContent: "center",
             display: "flex",
             flexShrink: 0,
+            marginRight: {
+              sm: "24px",
+            },
             img: {
               width: {
                 xs: "28px",
@@ -75,12 +79,11 @@ function Header() {
                 lg: "21.341px",
                 xl: "21.341px",
                 xxl: "21.341px",
-              }
-            }
+              },
+            },
           }}
         >
-            <img src={logo} alt="Logo" />
-
+          <img src={logo} alt="Logo" />
         </Box>
 
         <Box
@@ -88,26 +91,41 @@ function Header() {
           sx={{
             display: "flex",
             alignItems: "center", // Vertically align items
-            gap: { md: "16px", lg: "16px", xl: "16px", xxl: "24px" },
+            gap: {
+              xs: "auto",
+              sm: "auto",
+              md: "16px",
+              lg: "16px",
+              xl: "16px",
+              xxl: "24px",
+            },
             // margin: { sm: "24px", md: "24px", lg: "40px", xl: "42px", xxl: "40px" },
-            // justifyContent: "center", // Horizontally align items
+            justifyContent: "space-between", // Horizontally align items
+            alignSelf: {
+              sm: "stretch",
+            },
           }}
         >
-          {pages.map((page) => (
-            <PageButton
-              page={page}
-              selectedPage={selectedPage}
-              handlePageClick={handlePageClick}
-            />
-          ))}
+          <MenuButton
+            pages={pages}
+            selectedPage={selectedPage}
+            handlePageClick={handlePageClick}
+            // sx={{ marginRight: { xs: 'auto', sm: 'auto' } }}
+          />
           <Box
             id="currencies"
             sx={{
-              marginLeft: { md: "32px", lg: "44px", xl: "160px", xxl: "140px" }, // The space you want to the right
+              marginLeft: {
+                sm: "auto",
+                md: "32px",
+                lg: "44px",
+                xl: "160px",
+                xxl: "140px",
+              }, // The space you want to the right
               display: "flex",
               justifyContent: "space-between", // Distribute the space evenly between your buttons
               alignItems: "center",
-              gap: { md: "8px", lg: "8px", xl: "8px", xxl: "16px" },
+              gap: { sm: "8px", md: "8px", lg: "8px", xl: "8px", xxl: "16px" },
             }}
           >
             <CurrencyButton type="Diamond">
@@ -130,7 +148,13 @@ function Header() {
           <Box
             id="avatar-photo"
             sx={{
-              marginLeft: { md: "0px", lg: "-4px", xl: "-4px", xxl: "-8px" },
+              marginLeft: {
+                sm: "8px",
+                md: "0px",
+                lg: "-4px",
+                xl: "-4px",
+                xxl: "-8px",
+              },
               display: "flex",
               boxSizing: "border-box",
             }}

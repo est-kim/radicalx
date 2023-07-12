@@ -1,0 +1,127 @@
+import React from "react";
+import PageButton from "./PageButton";
+import {
+  Button,
+  Box,
+  Menu,
+  MenuItem,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+
+const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
+  const theme = useTheme();
+  const isXsToMd = useMediaQuery(theme.breakpoints.between("xs", "md"));
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const backgroundImage = "linear-gradient(to right, #00F5A0, #00D9F5)";
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleMenuItemClick = (page) => {
+    handlePageClick(page);
+    handleClose();
+  };
+
+  if (isXsToMd) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          padding: {
+            xs: "1px",
+            sm: "1px",
+          },
+          borderRadius: "100px",
+          backgroundImage,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Button
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          onClick={handleClick}
+          sx={{
+            fontFamily: "Inter",
+            fontWeight: 700,
+            fontStyle: "normal",
+            textAlign: "center",
+            fontSize: {
+              xs: "12px",
+              sm: "14px",
+            },
+            lineHeight: {
+              xs: "140%",
+              sm: "140%",
+            },
+            letterSpacing: {
+              xs: "0.2px",
+              sm: "0.2px",
+            },
+            textTransform: "none",
+            color: "#FFFFFF",
+            position: "relative",
+            backgroundColor: "#181A20",
+            borderRadius: "100px",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "36px",
+            display: "flex",
+            gap: "8px",
+            padding: "6px 16px",
+          }}
+        >
+          {selectedPage || "🚀 Missions"}{" "}
+          <img src="/ArrowDown.svg" alt="dropdown" />
+        </Button>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          {pages.map((page) => (
+            <MenuItem
+              onClick={() => handleMenuItemClick(page)}
+              sx={
+                {
+                  // Your MenuItem styles here
+                }
+              }
+            >
+              {page}
+            </MenuItem>
+          ))}
+        </Menu>
+      </Box>
+    );
+  } else {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          gap: { md: "16px", lg: "16px", xl: "16px", xxl: "24px" },
+        }}
+      >
+        {pages.map((page) => (
+          <PageButton
+            key={page}
+            page={page}
+            selectedPage={selectedPage}
+            handlePageClick={handlePageClick}
+          />
+        ))}
+      </Box>
+    );
+  }
+};
+
+export default MenuButton;

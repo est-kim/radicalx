@@ -12,21 +12,13 @@ import {
 import CurrencyButton from "./CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButtonImage";
 import AvatarWithStatus from "./AvatarWithStatus";
-import PageButton from "./PageButton";
+import Logo from "./Logo";
 import MenuButton from "./MenuButton";
 
 const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
   const [selectedPage, setSelectedPage] = React.useState(null);
-  const [avatarData, setAvatarData] = React.useState({ url: "", id: "" });
-
-  const theme = useTheme();
-  const isXsToMd = useMediaQuery(theme.breakpoints.between("xs", "lg"));
-  const logo = isXsToMd
-    ? "/SmallBlueLogoRadicalX.svg"
-    : "/WhiteLogoRadicalX.svg";
 
   const handlePageClick = (pageName) => {
     setSelectedPage(pageName);
@@ -51,42 +43,7 @@ function Header() {
           },
         }}
       >
-        <Box
-          component="a"
-          href="/"
-          id="logo"
-          sx={{
-            alignItems: "center",
-            justifyContent: "center",
-            display: "flex",
-            flexShrink: 0,
-            marginRight: {
-              xs: "8px",
-              sm: "24px",
-              md: "16px"
-            },
-            img: {
-              width: {
-                xs: "28px",
-                sm: "36px",
-                md: "36px",
-                lg: "166.72px",
-                xl: "166.72px",
-                xxl: "166.72px",
-              },
-              height: {
-                xs: "28px",
-                sm: "36px",
-                md: "36px",
-                lg: "21.341px",
-                xl: "21.341px",
-                xxl: "21.341px",
-              },
-            },
-          }}
-        >
-          <img src={logo} alt="Logo" />
-        </Box>
+        <Logo />
         <Box
           id="menu-board"
           sx={{
@@ -109,7 +66,6 @@ function Header() {
             handlePageClick={handlePageClick}
           />
         </Box>
-
         <Box
           id="currencies"
           sx={{
@@ -122,13 +78,19 @@ function Header() {
               xxl: "0px",
             }, // The space you want to the right
             display: "flex",
-            // justifyContent: "space-between", // Distribute the space evenly between your buttons
             alignItems: "center",
             alignSelf: {
               xs: "center",
-              xxl: "stretch"
+              xxl: "stretch",
             },
-            gap: { xs: "4px", sm: "8px", md: "8px", lg: "8px", xl: "8px", xxl: "16px" },
+            gap: {
+              xs: "4px",
+              sm: "8px",
+              md: "8px",
+              lg: "8px",
+              xl: "8px",
+              xxl: "16px",
+            },
           }}
         >
           <CurrencyButton type="Diamond">
@@ -147,18 +109,17 @@ function Header() {
             />
             11,000
           </CurrencyButton>
-        <Box
-          id="avatar-photo"
-          sx={{
-            display: "flex",
-            boxSizing: "border-box",
-          }}
-        >
-          <AvatarWithStatus avatarSrc="/ellipse.svg" />
-        </Box>
+          <Box
+            id="avatar-photo"
+            sx={{
+              display: "flex",
+              boxSizing: "border-box",
+            }}
+          >
+            <AvatarWithStatus avatarSrc="/ellipse.svg" />
+          </Box>
         </Box>
       </Toolbar>
-      {/* </Container> */}
     </AppBar>
   );
 }

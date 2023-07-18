@@ -7,20 +7,18 @@ function CurrencyButtonImage({ src, alt }) {
       alt={alt}
       sx={{
         width: {
-          xs: "18px",
-          sm: "20px",
-          md: "20px",
-          lg: "24px",
-          xl: "24px",
-          xxl: "28px",
+          mobileSmall: "18px",
+          mobile: "20px",
+          tablet: "20px",
+          desktop: "24px",
+          desktopLarge: "28px",
         },
         height: {
-          xs: "18px",
-          sm: "20px",
-          md: "20px",
-          lg: "24px",
-          xl: "24px",
-          xxl: "28px",
+          mobileSmall: "18px",
+          mobile: "20px",
+          tablet: "20px",
+          desktop: "24px",
+          desktopLarge: "28px",
         },
       }}
     />

@@ -35,14 +35,14 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
         sx={{
           display: "inline-flex",
           padding: {
-            xs: "1px",
-            sm: "1px",
+            mobileSmall: "1px",
+            mobile: "1px",
           },
           borderRadius: "100px",
           backgroundImage,
           alignItems: "flex-start",
           justifyContent: "center",
-          height: {xs: "100%",sm: "100%"},
+          height: {mobileSmall: "100%",mobile: "100%"},
         }}
       >
         <Button
@@ -55,16 +55,16 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
             fontStyle: "normal",
             textAlign: "center",
             fontSize: {
-              xs: "12px",
-              sm: "14px",
+              mobileSmall: "12px",
+              mobile: "14px",
             },
             lineHeight: {
-              xs: "140%",
-              sm: "140%",
+              mobileSmall: "140%",
+              mobile: "140%",
             },
             letterSpacing: {
-              xs: "0.2px",
-              sm: "0.2px",
+              mobileSmall: "0.2px",
+              mobile: "0.2px",
             },
             textTransform: "none",
             color: "#FFFFFF",
@@ -74,10 +74,10 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
             alignItems: "center",
             justifyContent: "center",
             alignSelf: "center",
-            height: {xs: "100%",sm: "36px"},
+            height: {mobileSmall: "100%",mobile: "36px"},
             display: "flex",
-            gap: { xs: "4px", sm: "8px" },
-            padding: {xs: "8px", sm: "6px 16px"},
+            gap: { mobileSmall: "4px", mobile: "8px" },
+            padding: {mobileSmall: "8px", mobile: "6px 16px"},
           }}
         >
           {selectedPage || "🚀 Missions"}{" "}
@@ -110,7 +110,7 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
       <Box
         sx={{
           display: "flex",
-          gap: { md: "16px", lg: "16px", xl: "16px", xxl: "24px" },
+          gap: { tablet: "16px", laptop: "16px", desktop: "16px", desktopLarge: "24px" },
         }}
       >
         {pages.map((page) => (

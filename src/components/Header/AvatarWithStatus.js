@@ -8,20 +8,20 @@ function AvatarWithStatus({ avatarSrc }) {
         src={avatarSrc}
         sx={{
           width: {
-            xs: "28px",
-            sm: "36px",
-            md: "36px",
-            lg: "36px",
-            xl: "36px",
-            xxl: "45px",
+            mobileSmall: "28px",
+            mobile: "36px",
+            tablet: "36px",
+            laptop: "36px",
+            desktop: "36px",
+            desktopLarge: "45px",
           },
           height: {
-            xs: "28px",
-            sm: "36px",
-            md: "36px",
-            lg: "36px",
-            xl: "36px",
-            xxl: "45px",
+            mobileSmall: "28px",
+            mobile: "36px",
+            tablet: "36px",
+            laptop: "36px",
+            desktop: "36px",
+            desktopLarge: "45px",
           },
         }}
       />
@@ -33,20 +33,20 @@ function AvatarWithStatus({ avatarSrc }) {
         borderRadius="50%"
         sx={{
           width: {
-            xs: 7,
-            sm: 9,
-            md: 9,
-            lg: 9,
-            xl: 9,
-            xxl: 11.25,
+            mobileSmall: 7,
+            mobile: 9,
+            tablet: 9,
+            laptop: 9,
+            desktop: 9,
+            desktopLarge: 11.25,
           },
           height: {
-            xs: 7,
-            sm: 9,
-            md: 9,
-            lg: 9,
-            xl: 9,
-            xxl: 11.25,
+            mobileSmall: 7,
+            mobile: 9,
+            tablet: 9,
+            laptop: 9,
+            desktop: 9,
+            desktopLarge: 11.25,
           },
         }}
       ></Box>

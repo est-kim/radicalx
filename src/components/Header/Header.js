@@ -4,10 +4,6 @@ import {
   AppBar,
   Box,
   Toolbar,
-  Typography,
-  Button,
-  useTheme,
-  useMediaQuery,
 } from "@mui/material";
 import CurrencyButton from "./CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButtonImage";
@@ -34,12 +30,12 @@ function Header() {
           justifyContent: "space-between",
           boxSizing: "border-box",
           margin: {
-            xs: "0px 16px 0px 16px",
-            sm: "0px 24px 0px 24px",
-            md: "0px 24px 0px 24px",
-            lg: "0px 40px 0px 40px",
-            xl: "0px 42px 0px 40px",
-            xxl: "0px 40px 0px 40px",
+            mobileSmall: "0px 16px 0px 16px",
+            mobile: "0px 24px 0px 24px",
+            tablet: "0px 24px 0px 24px",
+            laptop: "0px 40px 0px 40px",
+            desktop: "0px 42px 0px 40px",
+            desktopLarge: "0px 40px 0px 40px",
           },
         }}
       >
@@ -51,12 +47,12 @@ function Header() {
             alignItems: "center", // Vertically align items
             justifyContent: "space-between",
             gap: {
-              xs: "auto",
-              sm: "auto",
-              md: "16px",
-              lg: "16px",
-              xl: "16px",
-              xxl: "24px",
+              mobileSmall: "auto",
+              mobile: "auto",
+              tablet: "16px",
+              laptop: "16px",
+              desktop: "16px",
+              desktopLarge: "24px",
             },
           }}
         >
@@ -70,26 +66,26 @@ function Header() {
           id="currencies"
           sx={{
             marginLeft: {
-              xs: "auto",
-              sm: "auto",
-              md: "0px",
-              lg: "0px",
-              xl: "0px",
-              xxl: "0px",
+              mobileSmall: "auto",
+              mobile: "auto",
+              tablet: "0px",
+              laptop: "0px",
+              desktop: "0px",
+              desktopLarge: "0px",
             }, // The space you want to the right
             display: "flex",
             alignItems: "center",
             alignSelf: {
-              xs: "center",
-              xxl: "stretch",
+              mobileSmall: "center",
+              desktopLarge: "stretch",
             },
             gap: {
-              xs: "4px",
-              sm: "8px",
-              md: "8px",
-              lg: "8px",
-              xl: "8px",
-              xxl: "16px",
+              mobileSmall: "4px",
+              mobile: "8px",
+              tablet: "8px",
+              laptop: "8px",
+              desktop: "8px",
+              desktopLarge: "16px",
             },
           }}
         >

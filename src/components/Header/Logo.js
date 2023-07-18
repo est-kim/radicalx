@@ -19,26 +19,26 @@ function Logo() {
         display: "flex",
         flexShrink: 0,
         marginRight: {
-          xs: "8px",
-          sm: "24px",
-          md: "16px"
+          mobileSmall: "8px",
+          mobile: "24px",
+          tablet: "16px"
         },
         img: {
           width: {
-            xs: "28px",
-            sm: "36px",
-            md: "36px",
-            lg: "166.72px",
-            xl: "166.72px",
-            xxl: "166.72px",
+            mobileSmall: "28px",
+            mobile: "36px",
+            tablet: "36px",
+            laptop: "166.72px",
+            desktop: "166.72px",
+            desktopLarge: "166.72px",
           },
           height: {
-            xs: "28px",
-            sm: "36px",
-            md: "36px",
-            lg: "21.341px",
-            xl: "21.341px",
-            xxl: "21.341px",
+            mobileSmall: "28px",
+            mobile: "36px",
+            tablet: "36px",
+            laptop: "21.341px",
+            desktop: "21.341px",
+            desktopLarge: "21.341px",
           },
         },
       }}

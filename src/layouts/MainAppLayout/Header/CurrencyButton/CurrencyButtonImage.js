@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 function CurrencyButtonImage({ src, alt }) {
   return (
-    <Box
+    <Grid
       component="img"
       src={src}
       alt={alt}

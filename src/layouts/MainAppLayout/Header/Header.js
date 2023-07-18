@@ -5,9 +5,9 @@ import {
   Box,
   Toolbar,
 } from "@mui/material";
-import CurrencyButton from "./CurrencyButton";
-import CurrencyButtonImage from "./CurrencyButtonImage";
-import AvatarWithStatus from "./AvatarWithStatus";
+import CurrencyButton from "./CurrencyButton/CurrencyButton";
+import CurrencyButtonImage from "./CurrencyButton/CurrencyButtonImage";
+import AvatarWithStatus from "../AccountAvatar/AvatarWithStatus";
 import Logo from "./Logo";
 import MenuButton from "./MenuButton";
 

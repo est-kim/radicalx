@@ -1,5 +1,5 @@
 import "./App.css";
-import Header from "./components/Header/Header";
+import Header from "./layouts/MainAppLayout/Header/Header";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({

@@ -3,7 +3,7 @@ import { Box, useTheme, useMediaQuery } from "@mui/material";
 
 function Logo() {
   const theme = useTheme();
-  const isXsToMd = useMediaQuery(theme.breakpoints.between("xs", "lg"));
+  const isXsToMd = useMediaQuery(theme.breakpoints.between("mobileSmall", "laptop"));
   const logo = isXsToMd
     ? "/SmallBlueLogoRadicalX.svg"
     : "/WhiteLogoRadicalX.svg";

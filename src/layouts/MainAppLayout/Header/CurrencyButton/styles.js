@@ -34,8 +34,8 @@ export const buttonProps = {
     },
     height: { mobileSmall: "100%", mobile: "100%" },
     borderRadius: "40px",
-    backgroundColor: "#181A20", // Adjust color as per requirement
-    color: "#FFFFFF", // Adjust color as per requirement
+    backgroundColor: "#181A20",
+    color: "#FFFFFF", 
     fontSize: {
       mobileSmall: "12px",
       mobile: "14px",

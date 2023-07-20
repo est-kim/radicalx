@@ -1,11 +1,11 @@
 import { Avatar, Grid } from "@mui/material";
-import { avatarProps, gridProps } from "./styles";
+import styles from "./styles";
 
 function AvatarWithStatus({ avatarSrc }) {
   return (
     <Grid container position="relative">
-      <Avatar alt="avatar-photo" src={avatarSrc} {...avatarProps} />
-      <Grid {...gridProps}></Grid>
+      <Avatar alt="avatar-photo" src={avatarSrc} {...styles.avatarProps} />
+      <Grid {...styles.gridProps}></Grid>
     </Grid>
   );
 }

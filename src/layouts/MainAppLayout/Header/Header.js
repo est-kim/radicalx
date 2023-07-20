@@ -5,7 +5,7 @@ import CurrencyButton from "./CurrencyButton/CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButton/CurrencyButtonImage";
 import AvatarWithStatus from "./AccountAvatar/AvatarWithStatus";
 import Logo from "./Logo/Logo";
-import MenuButton from "./MenuButton";
+import MenuButton from "./MenuButton/MenuButton";
 import {
   appBarStyle,
   gridStyle,

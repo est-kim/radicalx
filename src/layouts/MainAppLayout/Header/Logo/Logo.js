@@ -1,22 +1,15 @@
 import * as React from "react";
-import { Grid, useTheme, useMediaQuery } from "@mui/material";
-import { logoGridStyle } from "./styles";
-import { SMALL_BLUE_LOGO, WHITE_LOGO } from '../../../../constants/logos';
+import { Grid } from "@mui/material";
+import styles from "./styles";
+import { SMALL_BLUE_LOGO, WHITE_LOGO } from "../../../../constants/logos";
+import { useMobileSmallToTablet } from "../../../../hooks/useMobileSmallToTablet";
 
 function Logo() {
-  const theme = useTheme();
-  const isXsToMd = useMediaQuery(
-    theme.breakpoints.between("mobileSmall", "laptop")
-  );
-  const logo = isXsToMd ? SMALL_BLUE_LOGO : WHITE_LOGO;
+  const isMobileSmallToTablet = useMobileSmallToTablet();
+  const logo = isMobileSmallToTablet ? SMALL_BLUE_LOGO : WHITE_LOGO;
 
   return (
-    <Grid
-      component="a"
-      href="/"
-      id="logo"
-      sx={logoGridStyle}
-    >
+    <Grid component="a" href="/" id="logo" {...styles.logoGridStyle}>
       <img src={logo} alt="Logo" />
     </Grid>
   );

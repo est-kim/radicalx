@@ -1,15 +1,18 @@
 import "./Header.module.css";
 import * as React from "react";
-import {
-  AppBar,
-  Box,
-  Toolbar,
-} from "@mui/material";
+import { AppBar, Grid } from "@mui/material";
 import CurrencyButton from "./CurrencyButton/CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButton/CurrencyButtonImage";
-import AvatarWithStatus from "../AccountAvatar/AvatarWithStatus";
-import Logo from "./Logo";
+import AvatarWithStatus from "./AccountAvatar/AvatarWithStatus";
+import Logo from "./Logo/Logo";
 import MenuButton from "./MenuButton";
+import {
+  appBarStyle,
+  gridStyle,
+  menuBoardStyle,
+  currenciesStyle,
+  avatarPhotoStyle,
+} from "./styles";
 
 const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
 
@@ -21,73 +24,22 @@ function Header() {
   };
 
   return (
-    <AppBar id="app-bar" sx={{ backgroundColor: "#181A20" }}>
-      <Toolbar
-        id="header"
-        disableGutters
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          boxSizing: "border-box",
-          margin: {
-            mobileSmall: "0px 16px 0px 16px",
-            mobile: "0px 24px 0px 24px",
-            tablet: "0px 24px 0px 24px",
-            laptop: "0px 40px 0px 40px",
-            desktop: "0px 42px 0px 40px",
-            desktopLarge: "0px 40px 0px 40px",
-          },
-        }}
-      >
+    <AppBar id="app-bar" sx={appBarStyle}>
+      <Grid id="header" disableGutters sx={gridStyle}>
         <Logo />
-        <Box
+        <Grid
           id="menu-board"
-          sx={{
-            display: "flex",
-            alignItems: "center", // Vertically align items
-            justifyContent: "space-between",
-            gap: {
-              mobileSmall: "auto",
-              mobile: "auto",
-              tablet: "16px",
-              laptop: "16px",
-              desktop: "16px",
-              desktopLarge: "24px",
-            },
-          }}
+          sx={menuBoardStyle}
         >
           <MenuButton
             pages={pages}
             selectedPage={selectedPage}
             handlePageClick={handlePageClick}
           />
-        </Box>
-        <Box
+        </Grid>
+        <Grid
           id="currencies"
-          sx={{
-            marginLeft: {
-              mobileSmall: "auto",
-              mobile: "auto",
-              tablet: "0px",
-              laptop: "0px",
-              desktop: "0px",
-              desktopLarge: "0px",
-            }, // The space you want to the right
-            display: "flex",
-            alignItems: "center",
-            alignSelf: {
-              mobileSmall: "center",
-              desktopLarge: "stretch",
-            },
-            gap: {
-              mobileSmall: "4px",
-              mobile: "8px",
-              tablet: "8px",
-              laptop: "8px",
-              desktop: "8px",
-              desktopLarge: "16px",
-            },
-          }}
+          sx={currenciesStyle}
         >
           <CurrencyButton type="Diamond">
             <CurrencyButtonImage
@@ -105,17 +57,14 @@ function Header() {
             />
             11,000
           </CurrencyButton>
-          <Box
+          <Grid
             id="avatar-photo"
-            sx={{
-              display: "flex",
-              boxSizing: "border-box",
-            }}
+            sx={avatarPhotoStyle}
           >
             <AvatarWithStatus avatarSrc="/ellipse.svg" />
-          </Box>
-        </Box>
-      </Toolbar>
+          </Grid>
+        </Grid>
+      </Grid>
     </AppBar>
   );
 }

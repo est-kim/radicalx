@@ -11,7 +11,7 @@ import {
 
 const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
   const theme = useTheme();
-  const isXsToMd = useMediaQuery(theme.breakpoints.between("xs", "md"));
+  const isXsToMd = useMediaQuery(theme.breakpoints.between("mobileSmall", "tablet"));
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const backgroundImage = "linear-gradient(to right, #00F5A0, #00D9F5)";

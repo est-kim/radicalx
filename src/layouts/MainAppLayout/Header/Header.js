@@ -6,6 +6,7 @@ import CurrencyButtonImage from "./CurrencyButton/CurrencyButtonImage";
 import AvatarWithStatus from "./AccountAvatar/AvatarWithStatus";
 import Logo from "./Logo/Logo";
 import MenuButton from "./MenuButton/MenuButton";
+import { useMobileSmallToTablet } from "../../../hooks/useMobileSmallToTablet";
 import {
   appBarStyle,
   gridStyle,
@@ -14,7 +15,7 @@ import {
   avatarPhotoStyle,
 } from "./styles";
 
-// const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
+const pagesMobile = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
 const pages = [
   { emoji: "🚀", text: "Missions" },
   { emoji: "🏆", text: "Leaderboard" },
@@ -23,6 +24,7 @@ const pages = [
 
 function Header() {
   const [selectedPage, setSelectedPage] = React.useState(null);
+  const isMobileSmallToTablet = useMobileSmallToTablet();
 
   const handlePageClick = (pageName) => {
     setSelectedPage(pageName);
@@ -37,7 +39,7 @@ function Header() {
           sx={menuBoardStyle}
         >
           <MenuButton
-            pages={pages}
+            pages={isMobileSmallToTablet ? pagesMobile : pages}
             selectedPage={selectedPage}
             handlePageClick={handlePageClick}
           />

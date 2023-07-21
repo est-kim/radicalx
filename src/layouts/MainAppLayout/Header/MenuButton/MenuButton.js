@@ -59,9 +59,9 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
   } else {
     return (
       <Grid {...styles.tabletToDesktopLargeProps}>
-        {pages.map((page) => (
+        {pages.map((page, index) => (
           <PageButton
-            key={page}
+            key={index}
             page={page}
             selectedPage={selectedPage}
             handlePageClick={handlePageClick}

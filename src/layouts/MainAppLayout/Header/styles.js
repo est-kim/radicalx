@@ -9,7 +9,6 @@ export const gridStyle = {
   margin: {
     mobileSmall: "0px 16px 0px 16px",
     mobile: "0px 24px 0px 24px",
-    tablet: "0px 24px 0px 24px",
     laptop: "0px 40px 0px 40px",
     desktop: "0px 42px 0px 40px",
     desktopLarge: "0px 40px 0px 40px",
@@ -31,8 +30,6 @@ export const menuBoardStyle = {
     mobileSmall: "auto",
     mobile: "auto",
     tablet: "16px",
-    laptop: "16px",
-    desktop: "16px",
     desktopLarge: "24px",
   },
 };
@@ -42,9 +39,6 @@ export const currenciesStyle = {
     mobileSmall: "auto",
     mobile: "auto",
     tablet: "0px",
-    laptop: "0px",
-    desktop: "0px",
-    desktopLarge: "0px",
   },
   display: "flex",
   alignItems: "center",
@@ -55,9 +49,6 @@ export const currenciesStyle = {
   gap: {
     mobileSmall: "4px",
     mobile: "8px",
-    tablet: "8px",
-    laptop: "8px",
-    desktop: "8px",
     desktopLarge: "16px",
   },
 };

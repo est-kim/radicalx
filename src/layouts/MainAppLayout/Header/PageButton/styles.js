@@ -5,8 +5,6 @@ const styles = ({ page, selectedPage }) => ({
       display: "block",
       fontSize: {
         mobile: "16px",
-        tablet: "16px",
-        laptop: "16px",
         desktop: "18px",
         desktopLarge: "20px",
       },
@@ -15,11 +13,9 @@ const styles = ({ page, selectedPage }) => ({
       fontWeight: 700,
       lineHeight: {
         tablet: "140%",
-        laptop: "140%",
-        desktop: "140%",
         desktopLarge: "160%",
       },
-      letterSpacing: { tablet: "0.2px", laptop: "0.2px", desktop: "0.2px" },
+      letterSpacing: { tablet: "0.2px"},
       textTransform: "none",
       padding: 0,
       gap: "24px",

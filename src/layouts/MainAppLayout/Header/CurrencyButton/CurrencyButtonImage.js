@@ -9,14 +9,12 @@ function CurrencyButtonImage({ src, alt }) {
         width: {
           mobileSmall: "18px",
           mobile: "20px",
-          tablet: "20px",
           desktop: "24px",
           desktopLarge: "28px",
         },
         height: {
           mobileSmall: "18px",
           mobile: "20px",
-          tablet: "20px",
           desktop: "24px",
           desktopLarge: "28px",
         },

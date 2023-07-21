@@ -14,7 +14,12 @@ import {
   avatarPhotoStyle,
 } from "./styles";
 
-const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
+// const pages = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
+const pages = [
+  { emoji: "🚀", text: "Missions" },
+  { emoji: "🏆", text: "Leaderboard" },
+  { emoji: "💰", text: "Rewards" },
+];
 
 function Header() {
   const [selectedPage, setSelectedPage] = React.useState(null);

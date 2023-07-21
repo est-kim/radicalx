@@ -28,7 +28,7 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
           aria-controls="simple-menu"
           aria-haspopup="true"
           onClick={handleClick}
-          {...styles.buttonProps} // fix here
+          {...styles.buttonProps}
         >
           {selectedPage || "🚀 Missions"}{" "}
           <img src="/ArrowDown.svg" alt="dropdown" />

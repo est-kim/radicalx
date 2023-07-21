@@ -1,13 +1,8 @@
 import React from "react";
 import PageButton from "../PageButton/PageButton";
-import {
-  Button,
-  Grid,
-  Menu,
-  MenuItem,
-} from "@mui/material";
+import { Button, Grid, Menu, MenuItem } from "@mui/material";
 import { useMobileSmallToTablet } from "../../../../hooks/useMobileSmallToTablet";
-import styles from "./styles"
+import styles from "./styles";
 
 const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
   const isMobileSmallToTablet = useMobileSmallToTablet();
@@ -28,14 +23,12 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
 
   if (isMobileSmallToTablet) {
     return (
-      <Grid
-        {...styles.mobileToTabletProps}
-      >
+      <Grid {...styles.mobileToTabletProps}>
         <Button
           aria-controls="simple-menu"
           aria-haspopup="true"
           onClick={handleClick}
-          {...styles.buttonProps}
+          {...styles.buttonProps} // fix here
         >
           {selectedPage || "🚀 Missions"}{" "}
           <img src="/ArrowDown.svg" alt="dropdown" />
@@ -47,12 +40,13 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          {pages.map((page) => (
+          {pages.map((page, index) => (
             <MenuItem
+              key={index + 1}
               onClick={() => handleMenuItemClick(page)}
               sx={
                 {
-                  // Your MenuItem styles here
+                  // MenuItem styles here from styles.js
                 }
               }
             >
@@ -64,9 +58,7 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
     );
   } else {
     return (
-      <Grid
-        {...styles.tabletToDesktopLargeProps}
-      >
+      <Grid {...styles.tabletToDesktopLargeProps}>
         {pages.map((page) => (
           <PageButton
             key={page}

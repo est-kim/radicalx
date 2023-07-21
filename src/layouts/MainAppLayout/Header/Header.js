@@ -25,7 +25,7 @@ function Header() {
 
   return (
     <AppBar id="app-bar" sx={appBarStyle}>
-      <Grid id="header" disableGutters sx={gridStyle}>
+      <Grid id="header" sx={gridStyle}>
         <Logo />
         <Grid
           id="menu-board"

@@ -10,7 +10,6 @@ export const gridProps = (backgroundImage) => ({
     backgroundImage,
     alignItems: "center",
     justifyContent: "center",
-    height: { mobileSmall: "100%", mobile: "100%" },
   },
 });
 
@@ -32,16 +31,16 @@ export const buttonProps = {
     alignSelf: {
       mobileSmall: "stretch",
     },
-    height: { mobileSmall: "100%", mobile: "100%" },
     borderRadius: "40px",
     backgroundColor: "#181A20",
-    color: "#FFFFFF", 
+    color: "#FFFFFF",
     fontSize: {
       mobileSmall: "12px",
       mobile: "14px",
       laptop: "16px",
       desktopLarge: "20px",
     },
+    position: "relative",
     fontFamily: "Inter",
     fontWeight: 700,
     fontStyle: "normal",

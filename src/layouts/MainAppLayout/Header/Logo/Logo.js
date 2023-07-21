@@ -2,11 +2,11 @@ import * as React from "react";
 import { Grid } from "@mui/material";
 import styles from "./styles";
 import { SMALL_BLUE_LOGO, WHITE_LOGO } from "../../../../constants/logos";
-import { useMobileSmallToTablet } from "../../../../hooks/useMobileSmallToTablet";
+import { useMobileSmallToLaptop } from "../../../../hooks/useMobileSmallToLaptop";
 
 function Logo() {
-  const isMobileSmallToTablet = useMobileSmallToTablet();
-  const logo = isMobileSmallToTablet ? SMALL_BLUE_LOGO : WHITE_LOGO;
+  const isMobileSmallToLaptop = useMobileSmallToLaptop();
+  const logo = isMobileSmallToLaptop ? SMALL_BLUE_LOGO : WHITE_LOGO;
 
   return (
     <Grid component="a" href="/" id="logo" {...styles.logoGridStyle}>

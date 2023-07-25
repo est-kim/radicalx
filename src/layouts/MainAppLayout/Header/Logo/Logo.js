@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Grid } from "@mui/material";
 import styles from "./styles";
 import { SMALL_BLUE_LOGO, WHITE_LOGO } from "../../../../constants/logos";

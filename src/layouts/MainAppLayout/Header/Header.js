@@ -5,9 +5,9 @@ import { AppBar, Grid } from "@mui/material";
 import { useMobileSmallToTablet } from "../../../hooks/useMobileSmallToTablet";
 
 import styles from "./styles";
+import AvatarWithStatus from "./AccountAvatar/AvatarWithStatus";
 import CurrencyButton from "./CurrencyButton/CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButton/CurrencyButtonImage";
-import AvatarWithStatus from "./AccountAvatar/AvatarWithStatus";
 import Logo from "./Logo/Logo";
 import MenuButton from "./MenuButton/MenuButton";
 

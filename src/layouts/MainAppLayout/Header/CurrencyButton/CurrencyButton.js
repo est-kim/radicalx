@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Grid, Button } from "@mui/material";
 import { gridProps, buttonProps } from "./styles";
 
@@ -8,7 +7,6 @@ const CHIP_BG = {
 }
 
 function CurrencyButton({ children, type }) {
-  // Conditional rendering of the gradient based on the type prop
   const backgroundImage = CHIP_BG[type];
 
   return (

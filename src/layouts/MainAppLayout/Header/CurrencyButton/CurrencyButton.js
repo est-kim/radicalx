@@ -1,5 +1,5 @@
 import { Grid, Button } from "@mui/material";
-import { gridProps, buttonProps } from "./styles";
+import styles from "./styles";
 
 const CHIP_BG = {
   Diamond: "linear-gradient(to right, #246BFD, #5089FD)",
@@ -10,8 +10,8 @@ function CurrencyButton({ children, type }) {
   const backgroundImage = CHIP_BG[type];
 
   return (
-    <Grid {...gridProps(backgroundImage)}>
-      <Button {...buttonProps}>{children}</Button>
+    <Grid {...styles.gridProps(backgroundImage)}>
+      <Button {...styles.buttonProps}>{children}</Button>
     </Grid>
   );
 }

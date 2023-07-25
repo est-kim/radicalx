@@ -1,12 +1,12 @@
-import React from "react";
-import PageButton from "../PageButton/PageButton";
+import { useState } from "react";
 import { Button, Grid, Menu, MenuItem } from "@mui/material";
-import { useMobileSmallToTablet } from "../../../../hooks/useMobileSmallToTablet";
 import styles from "./styles";
+import PageButton from "../PageButton/PageButton";
+import { useMobileSmallToTablet } from "../../../../hooks/useMobileSmallToTablet";
 
 const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
   const isMobileSmallToTablet = useMobileSmallToTablet();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -44,11 +44,6 @@ const MenuButton = ({ pages, selectedPage, handlePageClick }) => {
             <MenuItem
               key={index + 1}
               onClick={() => handleMenuItemClick(page)}
-              sx={
-                {
-                  // MenuItem styles here from styles.js
-                }
-              }
             >
               {page}
             </MenuItem>

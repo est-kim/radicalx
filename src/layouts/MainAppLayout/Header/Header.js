@@ -1,19 +1,15 @@
-import "./Header.module.css";
-import * as React from "react";
+import { useState } from "react";
+
 import { AppBar, Grid } from "@mui/material";
+
+import { useMobileSmallToTablet } from "../../../hooks/useMobileSmallToTablet";
+
+import styles from "./styles";
 import CurrencyButton from "./CurrencyButton/CurrencyButton";
 import CurrencyButtonImage from "./CurrencyButton/CurrencyButtonImage";
 import AvatarWithStatus from "./AccountAvatar/AvatarWithStatus";
 import Logo from "./Logo/Logo";
 import MenuButton from "./MenuButton/MenuButton";
-import { useMobileSmallToTablet } from "../../../hooks/useMobileSmallToTablet";
-import {
-  appBarStyle,
-  gridStyle,
-  menuBoardStyle,
-  currenciesStyle,
-  avatarPhotoStyle,
-} from "./styles";
 
 const pagesMobile = ["🚀 Missions", "🏆 Leaderboard", "💰 Rewards"];
 const pages = [
@@ -23,7 +19,7 @@ const pages = [
 ];
 
 function Header() {
-  const [selectedPage, setSelectedPage] = React.useState(null);
+  const [selectedPage, setSelectedPage] = useState(null);
   const isMobileSmallToTablet = useMobileSmallToTablet();
 
   const handlePageClick = (pageName) => {
@@ -31,12 +27,12 @@ function Header() {
   };
 
   return (
-    <AppBar id="app-bar" sx={appBarStyle}>
-      <Grid id="header" sx={gridStyle}>
+    <AppBar id="app-bar" {...styles.appBarStyle}>
+      <Grid id="header" {...styles.gridStyle}>
         <Logo />
         <Grid
           id="menu-board"
-          sx={menuBoardStyle}
+          {...styles.menuBoardStyle}
         >
           <MenuButton
             pages={isMobileSmallToTablet ? pagesMobile : pages}
@@ -46,7 +42,7 @@ function Header() {
         </Grid>
         <Grid
           id="currencies"
-          sx={currenciesStyle}
+          {...styles.currenciesStyle}
         >
           <CurrencyButton type="Diamond">
             <CurrencyButtonImage
@@ -66,7 +62,7 @@ function Header() {
           </CurrencyButton>
           <Grid
             id="avatar-photo"
-            sx={avatarPhotoStyle}
+            {...styles.avatarPhotoStyle}
           >
             <AvatarWithStatus avatarSrc="/ellipse.svg" />
           </Grid>

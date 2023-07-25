@@ -21,7 +21,6 @@ const styles = {
       backgroundColor: "#181A20",
       borderRadius: "100px",
       alignItems: "center",
-    //   justifyContent: "start",
       alignSelf: "center",
       height: { mobileSmall: "100%", mobile: "36px" },
       display: "flex",
@@ -40,7 +39,6 @@ const styles = {
       backgroundImage: "linear-gradient(to right, #00F5A0, #00D9F5)",
       alignItems: "flex-start",
       justifyContent: "center",
-    //   height: { mobileSmall: "100%", mobile: "100%" },
     },
   },
   tabletToDesktopLargeProps: {

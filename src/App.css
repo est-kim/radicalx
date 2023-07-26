@@ -24,21 +24,3 @@ body {
 article h1 {
   margin: 1rem 0;
 }
-
-#header {
-  background-color: #1f222a;
-}
-
-/* For screens with a width between 1024px and 1535px */
-@media (min-width: 1024px) and (max-width: 1535px) {
-  #header {
-    height: 66px;
-  }
-}
-
-/* For screens with a width of 1536px and above */
-@media (min-width: 1536px) {
-  #header {
-    height: 85px;
-  }
-}

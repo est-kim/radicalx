@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap");
 
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +14,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right, #D1B3FF, #99FDFF) no-repeat fixed;
+  background-size: cover;
 }
 
 .container {
@@ -24,3 +28,23 @@ body {
 article h1 {
   margin: 1rem 0;
 }
+
+#header {
+  background-color: #1f222a;
+}
+
+/* For screens with a width between 1024px and 1535px */
+@media (min-width: 1024px) and (max-width: 1535px) {
+  #header {
+    height: 66px;
+  }
+}
+
+/* For screens with a width of 1536px and above */
+@media (min-width: 1536px) {
+  #header {
+    height: 85px;
+  }
+}
+
+

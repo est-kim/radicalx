@@ -3,12 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header/Header';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      mobileSmall: 320,
+      mobile: 576.5,
+      tablet: 767.5,
+      laptop: 1024,
+      desktop: 1280,
+      desktopLarge: 1536,
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

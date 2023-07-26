@@ -1,11 +1,9 @@
-import './App.css';
-import Header from './components/Header/Header';
+import "./App.css";
+import Header from "./layouts/MainAppLayout/Header/Header";
 
 function App() {
   return (
-    <div>
-      <Header />
-    </div>
+      <Header/>
   );
 }
 

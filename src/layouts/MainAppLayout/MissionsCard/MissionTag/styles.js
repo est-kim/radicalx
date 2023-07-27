@@ -2,10 +2,10 @@ const styles = {
   boxStyle: {
     sx: {
       display: "flex",
-      padding: "4px 8px",
+      padding: {mobileSmall: "4px 8px", mobile: "4px", tablet: "4px 8px"},
       justifyContent: "center",
       alignItems: "center",
-      gap: "8px",
+      gap: {mobileSmall: "6px", mobile: "8px"},
       borderRadius: "6px",
       background: "#35383F",
     },
@@ -14,7 +14,7 @@ const styles = {
     sx: {
       color: "#E0E0E0",
       fontFamily: "Inter",
-      fontSize: "14px",
+      fontSize: {mobileSmall: "12px", tablet: "14px"},
       fontStyle: "normal",
       fontWeight: "700",
       lineHeight: "normal",

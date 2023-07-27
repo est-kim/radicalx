@@ -25,12 +25,7 @@ function MissionCard() {
       <Card {...styles.cardStyle}>
         <MissionCardImage />
         <CardContent {...styles.missionInfoStyle}>
-          <Grid
-            container
-            direction="row"
-            alignItems="center"
-            sx={{ gap: "12px" }}
-          >
+          <Grid container {...styles.companyInfoStyle}>
             <Grid item>
               <CompanyIcon />
             </Grid>

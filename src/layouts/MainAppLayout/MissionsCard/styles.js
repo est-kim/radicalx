@@ -11,7 +11,22 @@ const styles = {
       backgroundColor: "#181A20",
       borderRadius: "20px",
       boxShadow: "0px 4px 60px 0px rgba(4, 6, 15, 0.08)",
-      height: "777px",
+      height: {
+        mobileSmall: "552px",
+        mobile: "704px",
+        tablet: "777px",
+      },
+      width: {
+        mobileSmall: "286px",
+        tablet: "100%"
+      }
+    },
+  },
+  companyInfoStyle: {
+    sx: {
+      direction: "row",
+      alignItems: "center",
+      gap: "12px",
     },
   },
   missionTagsStyle: {
@@ -22,7 +37,10 @@ const styles = {
   },
   missionInfoStyle: {
     sx: {
-      padding: "24px 24px 0px 24px",
+      padding: {
+        mobileSmall: "16px 16px 0px 16px",
+        tablet: "24px 24px 0px 24px",
+      }
     },
   },
 };

@@ -1,8 +1,8 @@
 const styles = {
   iconStyle: {
     sx: {
-      height: "70px",
-      width: "70px",
+      height: {mobileSmall: "50px", mobile: "70px"},
+      width: {mobileSmall: "50px", mobile: "70px"},
     },
   },
 };

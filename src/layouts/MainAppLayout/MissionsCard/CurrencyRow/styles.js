@@ -10,16 +10,16 @@ const styles = {
       lineHeight: "120%",
       letterSpacing: "0.2px",
       textTransform: "uppercase",
-      paddingTop: "8px"
+      paddingTop: "8px",
     },
   },
   gridContainerStyle: {
     sx: {
-        gap: "12px",
-        justifyContent: "center",
-        marginBottom: "16px"
-    }
-  }
+      gap: "12px",
+      justifyContent: "center",
+      marginBottom: "16px",
+    },
+  },
 };
 
 export default styles;

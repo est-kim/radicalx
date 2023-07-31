@@ -1,12 +1,8 @@
 import {
-  Box,
-  Button,
   Card,
-  CardActions,
   CardContent,
   Divider,
   Grid,
-  Typography,
 } from "@mui/material";
 import AvatarList from "./AvatarList/AvatarList";
 import CompanyIcon from "./CompanyIcon/CompanyIcon";
@@ -50,7 +46,7 @@ function MissionCard() {
         <Divider {...styles.dividerStyle} />
         <ViewLeaderboard>
           View Current Leaderboard 🏆
-        </ViewLeaderboard> // gap 16px after here
+        </ViewLeaderboard>
         <AvatarList></AvatarList>
       </Card>
     </Grid>

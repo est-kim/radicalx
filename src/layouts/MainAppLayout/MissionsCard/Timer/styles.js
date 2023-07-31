@@ -25,19 +25,23 @@ const styles = {
   outerBoxStyle: {
     sx: {
       padding: "0px 24px",
-      marginBottom: "16px"
+      marginBottom: "16px",
     },
   },
   timerBoxStyle: {
     sx: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '10px',
-      alignSelf: 'stretch',
-      padding: '0px 27px',
-      borderRadius: '4px',
-      border: "1px solid #FF8A9B"
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "10px",
+      alignSelf: "stretch",
+      padding: {
+        tablet: "0px 10px",
+        laptop: "0px 27px",
+      },
+
+      borderRadius: "4px",
+      border: "1px solid #FF8A9B",
     },
   },
   timerNumberStyle: {
@@ -51,15 +55,15 @@ const styles = {
   },
   timerTextStyle: {
     sx: {
-        marginTop: "8px",
-        fontFamily: "Roboto Mono",
-        fontSize: "12px",
-        fontStyle: "normal",
-        fontWeight: "400",
-        lineHeight: "normal",
-        textAlign: "center"
-    }
-  }
+      marginTop: "8px",
+      fontFamily: "Roboto Mono",
+      fontSize: "12px",
+      fontStyle: "normal",
+      fontWeight: "400",
+      lineHeight: "normal",
+      textAlign: "center",
+    },
+  },
 };
 
 export default styles;

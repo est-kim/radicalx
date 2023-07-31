@@ -1,4 +1,4 @@
-import { Grid, Typography, Box, SvgIcon } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import { styled } from "@mui/system";
 import styles from "./styles";
 import MissionButton from "../MissionButton/MissionButton";

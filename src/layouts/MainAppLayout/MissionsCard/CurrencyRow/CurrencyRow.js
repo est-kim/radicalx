@@ -12,11 +12,7 @@ function CurrencyRow() {
           <CurrencyButtonImage component="img" src="/CoinGold.svg" alt="Coin" />
           12,000
         </CurrencyButton>
-        <Typography
-          {...styles.buttonDescriptionStyle}
-        >
-          Prize Pool
-        </Typography>
+        <Typography {...styles.buttonDescriptionStyle}>Prize Pool</Typography>
       </Grid>
       <Grid item xs={4}>
         <CurrencyButton type="Players">
@@ -27,11 +23,7 @@ function CurrencyRow() {
           />
           34/50
         </CurrencyButton>
-        <Typography
-          {...styles.buttonDescriptionStyle}
-        >
-          Players
-        </Typography>
+        <Typography {...styles.buttonDescriptionStyle}>Players</Typography>
       </Grid>
       <Grid item xs={4}>
         <CurrencyButton type="Diamond">
@@ -42,13 +34,7 @@ function CurrencyRow() {
           />
           500
         </CurrencyButton>
-
-        <Typography
-          align="body1"
-          {...styles.buttonDescriptionStyle}
-        >
-          Entry Fee
-        </Typography>
+        <Typography {...styles.buttonDescriptionStyle}>Entry Fee</Typography>
       </Grid>
     </Grid>
   );

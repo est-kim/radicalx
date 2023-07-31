@@ -2,6 +2,7 @@ const styles = {
   outerBoxStyle: {
     sx: {
       padding: "0px 24px",
+      marginBottom: "16px"
     },
   },
   viewLeaderboardStyle: {

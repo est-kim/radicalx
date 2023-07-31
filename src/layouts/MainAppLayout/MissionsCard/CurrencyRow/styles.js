@@ -16,7 +16,8 @@ const styles = {
   gridContainerStyle: {
     sx: {
         gap: "12px",
-        justifyContent: "center"
+        justifyContent: "center",
+        marginBottom: "16px"
     }
   }
 };

@@ -8,6 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import AvatarList from "./AvatarList/AvatarList";
 import CompanyIcon from "./CompanyIcon/CompanyIcon";
 import CompanyName from "./CompanyName/CompanyName";
 import CurrencyRow from "./CurrencyRow/CurrencyRow";
@@ -49,7 +50,8 @@ function MissionCard() {
         <Divider {...styles.dividerStyle} />
         <ViewLeaderboard>
           View Current Leaderboard 🏆
-        </ViewLeaderboard>
+        </ViewLeaderboard> // gap 16px after here
+        <AvatarList></AvatarList>
       </Card>
     </Grid>
   );

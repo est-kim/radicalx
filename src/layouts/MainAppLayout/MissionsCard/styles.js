@@ -36,6 +36,11 @@ const styles = {
       backgroundColor: "#35383F",
     },
   },
+  leaderboardStyle: {
+    sx: {
+      width: "100%",
+    },
+  },
   missionTagsStyle: {
     sx: {
       gap: "8px",
@@ -48,6 +53,11 @@ const styles = {
         mobileSmall: "16px 16px 0px 16px",
         tablet: "24px 24px 0px 24px",
       },
+    },
+  },
+  timerStyle: {
+    sx: {
+      width: "100%",
     },
   },
 };

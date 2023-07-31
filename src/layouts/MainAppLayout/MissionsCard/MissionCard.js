@@ -15,7 +15,7 @@ import MissionCardImage from "./MissionCardImage/MissionCardImage";
 import MissionTag from "./MissionTag/MissionTag";
 import Timer from "./Timer/Timer";
 import styles from "./styles";
-
+import ViewLeaderboard from "./ViewLeaderboard/ViewLeaderboard";
 
 function MissionCard() {
   return (
@@ -44,9 +44,12 @@ function MissionCard() {
           </Grid>
         </CardContent>
         <Divider {...styles.dividerStyle} />
-        <CurrencyRow/>
-        <Timer/>
+        <CurrencyRow />
+        <Timer {...styles.timerStyle} />
         <Divider {...styles.dividerStyle} />
+        <ViewLeaderboard>
+          View Current Leaderboard 🏆
+        </ViewLeaderboard>
       </Card>
     </Grid>
   );

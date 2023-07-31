@@ -13,6 +13,7 @@ import CompanyName from "./CompanyName/CompanyName";
 import CurrencyRow from "./CurrencyRow/CurrencyRow";
 import MissionCardImage from "./MissionCardImage/MissionCardImage";
 import MissionTag from "./MissionTag/MissionTag";
+import Timer from "./Timer/Timer";
 import styles from "./styles";
 
 
@@ -44,6 +45,8 @@ function MissionCard() {
         </CardContent>
         <Divider {...styles.dividerStyle} />
         <CurrencyRow/>
+        <Timer/>
+        <Divider {...styles.dividerStyle} />
       </Card>
     </Grid>
   );

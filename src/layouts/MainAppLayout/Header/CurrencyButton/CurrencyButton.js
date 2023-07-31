@@ -3,7 +3,8 @@ import styles from "./styles";
 
 const CHIP_BG = {
   Diamond: "linear-gradient(to right, #246BFD, #5089FD)",
-  Coin: "linear-gradient(to right, #FACC15, #FFE580)"
+  Coin: "linear-gradient(to right, #FACC15, #FFE580)",
+  Players: "linear-gradient(to right, #FF5A5F, #FF8A9B)"
 }
 
 function CurrencyButton({ children, type }) {

@@ -4,14 +4,17 @@ import {
   Card,
   CardActions,
   CardContent,
+  Divider,
   Grid,
   Typography,
 } from "@mui/material";
 import CompanyIcon from "./CompanyIcon/CompanyIcon";
 import CompanyName from "./CompanyName/CompanyName";
+import CurrencyRow from "./CurrencyRow/CurrencyRow";
 import MissionCardImage from "./MissionCardImage/MissionCardImage";
 import MissionTag from "./MissionTag/MissionTag";
 import styles from "./styles";
+
 
 function MissionCard() {
   return (
@@ -39,6 +42,8 @@ function MissionCard() {
             </Grid>
           </Grid>
         </CardContent>
+        <Divider {...styles.dividerStyle} />
+        <CurrencyRow/>
       </Card>
     </Grid>
   );

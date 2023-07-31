@@ -18,8 +18,8 @@ const styles = {
       },
       width: {
         mobileSmall: "286px",
-        tablet: "100%"
-      }
+        tablet: "100%",
+      },
     },
   },
   companyInfoStyle: {
@@ -27,6 +27,13 @@ const styles = {
       direction: "row",
       alignItems: "center",
       gap: "12px",
+    },
+  },
+  dividerStyle: {
+    sx: {
+      height: "1px",
+      width: "100%",
+      backgroundColor: "#35383F",
     },
   },
   missionTagsStyle: {
@@ -40,7 +47,7 @@ const styles = {
       padding: {
         mobileSmall: "16px 16px 0px 16px",
         tablet: "24px 24px 0px 24px",
-      }
+      },
     },
   },
 };
